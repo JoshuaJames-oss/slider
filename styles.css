@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease-in-out;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.background-text {
+    position: absolute;
+    top: 20%;
+    left: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+}
+
+.background-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.background-text p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+
+.slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 420px; /* Adjust based on two images width + gap */
+}
+
+.slide {
+    display: flex;
+    gap: 20px; /* Add space between images */
+    transition: transform 0.5s ease-in-out;
+}
+
+.item {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 90%; /* Center vertically */
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+#prev {
+    left: 45%; /* Position inside background image */
+}
+
+#next {
+    right: 45%; /* Position inside background image */
+}
